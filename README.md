@@ -1,6 +1,9 @@
 jquery-slider
 =====================
 
+[![NPM version](https://badge.fury.io/js/jquery-slider.png)](http://badge.fury.io/js/jquery-slider)
+[![Build Status](https://travis-ci.org/darul75/jquery-slider.png?branch=master)](https://travis-ci.org/darul75/jquery-slider)
+
 Amazing nice slider made by Egor Khmelev.
 
 https://github.com/egorkhmelev/jslider
