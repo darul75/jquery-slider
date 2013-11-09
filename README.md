@@ -21,8 +21,6 @@ How to use it
 
 TODO
 
-```
-
 assuming you already have `grunt` installed, otherwise you also need to do:
 
 ```
