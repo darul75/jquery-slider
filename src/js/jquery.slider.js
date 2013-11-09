@@ -38,36 +38,36 @@
   }
 
 	$.slider = function( node, settings ){
-	  var jNode = $(node);
-	  if( !jNode.data( "jslider" ) )
-	    jNode.data( "jslider", new jSlider( node, settings ) );
-	  
-	  return jNode.data( "jslider" );
+    var jNode = $(node);
+    if( !jNode.data( "jslider" ) )
+      jNode.data( "jslider", new jSlider( node, settings ) );
+
+    return jNode.data( "jslider" );
 	};
 	
 	$.fn.slider = function( action, opt_value ){
-	  var returnValue, args = arguments;
+    var returnValue, args = arguments;
 	  
-	  function isDef( val ){
-	    return val !== undefined;
-	  };
+    function isDef( val ){
+      return val !== undefined;
+    };
 
 	  function isDefAndNotNull( val ){
       return val != null;
 	  };
 	  
 		this.each(function(){
-		  var self = $.slider( this, action );
+      var self = $.slider( this, action );
 		  
-		  // do actions
-		  if( typeof action == "string" ){
-		    switch( action ){
-		      case "value":
-		        if( isDef( args[ 1 ] ) && isDef( args[ 2 ] ) ){
-		          var pointers = self.getPointers();
-		          if( isDefAndNotNull( pointers[0] ) && isDefAndNotNull( args[1] ) ){
-		            pointers[0].set( args[ 1 ] );
-		            pointers[0].setIndexOver();
+      // do actions
+      if( typeof action == "string" ){
+        switch( action ){
+          case "value":
+            if( isDef( args[ 1 ] ) && isDef( args[ 2 ] ) ){
+              var pointers = self.getPointers();
+              if( isDefAndNotNull( pointers[0] ) && isDefAndNotNull( args[1] ) ){
+                pointers[0].set( args[ 1 ] );
+                pointers[0].setIndexOver();
 		          }
 		          
 		          if( isDefAndNotNull( pointers[1] ) && isDefAndNotNull( args[2] ) ){
